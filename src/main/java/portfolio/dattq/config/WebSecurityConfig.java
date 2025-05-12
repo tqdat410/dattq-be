@@ -88,6 +88,7 @@ public CorsConfigurationSource corsConfigurationSource() {
                 auth.requestMatchers("/api/auth/**").permitAll()
                     .requestMatchers("/api/public/**").permitAll()
                     .requestMatchers(HttpMethod.GET, "/api/portfolio/**").permitAll()
+                    .requestMatchers("/api/ping/**").permitAll()
                     .anyRequest().authenticated()
             );
         
